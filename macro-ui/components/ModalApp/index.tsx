@@ -70,7 +70,7 @@ export const ModalApp: ForwardRefComponent<ModalAppRef, ModalAppProps> =
             <Box flex={1}>
               <TextTickerApp
                 type="heading"
-                color={colors.tint}
+                color={colors.primary}
                 textAlign="center"
               >
                 {title}
@@ -78,7 +78,7 @@ export const ModalApp: ForwardRefComponent<ModalAppRef, ModalAppProps> =
             </Box>
             <Show when={!required}>
               <PressableApp p={scaler(16)} onPress={close}>
-                <Ionicons name="close" size={24} color={colors.tint} />
+                <Ionicons name="close" size={24} color={colors.primary} />
               </PressableApp>
             </Show>
           </Row>

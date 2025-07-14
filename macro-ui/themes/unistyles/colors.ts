@@ -1,4 +1,4 @@
-import {ColorsStatic} from '../colors-static';
+import { ColorDark, ColorLight } from "../colors-static";
 
 export const SIZES = {
   font: 20,
@@ -7,11 +7,11 @@ export const SIZES = {
 
 export const colors = {
   light: {
-    colors: ColorsStatic,
+    colors: ColorLight,
     sizes: SIZES,
   },
   dark: {
-    colors: ColorsStatic,
+    colors: ColorDark,
     sizes: SIZES,
   },
 };

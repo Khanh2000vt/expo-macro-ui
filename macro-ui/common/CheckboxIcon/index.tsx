@@ -24,7 +24,7 @@ export const CheckboxIcon: React.FC<CheckboxIconProps> = ({
     <View style={styles.container(size, checked)}>
       <Show when={checked}>
         <BoxAnimatedFade>
-          <Ionicons name="checkmark" size={14} color={colors.tint} />
+          <Ionicons name="checkmark" size={14} color={colors.primary} />
         </BoxAnimatedFade>
       </Show>
     </View>
@@ -37,7 +37,7 @@ const styles = StyleSheet.create(({ colors }) => ({
     height: scaler(size),
     borderRadius: 6,
     borderWidth: 1.5,
-    borderColor: checked ? colors.tint : colors.border,
+    borderColor: checked ? colors.primary : colors.border,
     justifyContent: "center",
     alignItems: "center",
   }),

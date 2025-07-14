@@ -106,10 +106,10 @@ const styles = StyleSheet.create(({ colors }, rt) => ({
     padding: scaler(8),
     borderBottomWidth: scaler(2),
     justifyContent: "center",
-    borderBottomColor: focus ? colors.tint : colors.transparent,
+    borderBottomColor: focus ? colors.primary : colors.transparent,
   }),
   text: (focus: boolean) => ({
-    color: focus ? colors.tint : colors.secondary,
+    color: focus ? colors.primary : colors.secondary,
     fontWeight: "600",
     textAlign: "center",
   }),

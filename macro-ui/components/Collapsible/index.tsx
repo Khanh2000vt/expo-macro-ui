@@ -54,7 +54,7 @@ export const Collapsible: React.FC<PropsWithChildren<CollapsibleProps>> = ({
       <Show when={open}>
         <Box ph={scaler(16)} pb={scaler(16)} rowGap={rowGap} style={styleBody}>
           <Show when={isLoading} fallback={children}>
-            <ActivityIndicator size="small" color={colors.tint} />
+            <ActivityIndicator size="small" color={colors.primary} />
           </Show>
         </Box>
       </Show>

@@ -28,7 +28,7 @@ export const Badge: React.FC<BadgeProps> = ({
 }) => {
   styles.useVariants({ type });
   const { theme } = useUnistyles();
-  const colorBadge = (bgColor || theme.colors.tint) as string;
+  const colorBadge = (bgColor || theme.colors.primary) as string;
   return (
     <Row
       pv={pv}

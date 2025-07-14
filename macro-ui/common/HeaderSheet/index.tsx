@@ -51,7 +51,7 @@ export const HeaderSheet: React.FC<HeaderSheetProps> = memo(
       <Box style={shadow.primary} bgColor={colors.white}>
         <Row justify="space-between">
           <PressableApp flex={1} p={scaler(12)} onPress={onClose}>
-            <Ionicons name="close" size={24} color={colors.tint} />
+            <Ionicons name="close" size={24} color={colors.primary} />
           </PressableApp>
           <Box flex={isMultiple ? 3 : 6}>
             <TextApp textAlign="center" type="title">
@@ -61,7 +61,7 @@ export const HeaderSheet: React.FC<HeaderSheetProps> = memo(
           <Show when={isMultiple} fallback={<Box flex={1} />}>
             <Box flex={1} align="flex-end">
               <PressableApp align="flex-end" p={scaler(12)} onPress={onConfirm}>
-                <TextApp weight={600} color={colors.tint}>
+                <TextApp weight={600} color={colors.primary}>
                   Chọn
                 </TextApp>
               </PressableApp>

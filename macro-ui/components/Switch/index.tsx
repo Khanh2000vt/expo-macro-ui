@@ -52,7 +52,7 @@ export const Switch: React.FC<SwitchProps> = ({
           <TextApp style={styleLabel} weight={400}>
             {label}
             <Show when={require}>
-              <TextApp color={colors.red2}> *</TextApp>
+              <TextApp color={colors.textError}> *</TextApp>
             </Show>
           </TextApp>
         </Box>

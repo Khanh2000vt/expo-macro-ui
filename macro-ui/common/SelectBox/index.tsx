@@ -42,7 +42,7 @@ export const SelectBox: React.FC<SelectBoxProps> = ({
       return colors.error;
     }
     if (isHaveValue) {
-      return colors.tint;
+      return colors.primary;
     }
     return colors.border;
   }, [error, colors, isHaveValue]);

@@ -54,8 +54,8 @@ export const SwitchIcon: React.FC<SwitchIconProps> = ({
 
 const styles = StyleSheet.create(({ colors }) => ({
   container: (size: number, checked: boolean) => ({
-    backgroundColor: checked ? colors.tint : colors.border,
-    borderColor: checked ? colors.tint : colors.border,
+    backgroundColor: checked ? colors.primary : colors.border,
+    borderColor: checked ? colors.primary : colors.border,
     height: size,
     width: size * 2,
     borderRadius: size,

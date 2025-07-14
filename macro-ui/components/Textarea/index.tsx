@@ -32,7 +32,7 @@ export const Textarea: React.FC<TextareaProps> = ({
       return theme.colors.error;
     }
     if (isFocus) {
-      return theme.colors.tint;
+      return theme.colors.primary;
     }
     return theme.colors.border;
   }, [error, isFocus, theme.colors]);
@@ -69,7 +69,7 @@ export const Textarea: React.FC<TextareaProps> = ({
       />
       <Show when={!!maxLength}>
         <Box alignSelf="flex-end" p={scaler(2)}>
-          <TextApp size={scaler(10)} color={theme.colors.gray}>
+          <TextApp size={scaler(10)} color={theme.colors.grey[400]}>
             {value?.length}/{maxLength}
           </TextApp>
         </Box>

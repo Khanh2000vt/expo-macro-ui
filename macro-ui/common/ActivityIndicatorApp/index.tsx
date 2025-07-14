@@ -1,18 +1,18 @@
-import React from 'react';
-import {ActivityIndicator, ColorValue} from 'react-native';
-import {useUnistyles} from 'react-native-unistyles';
+import React from "react";
+import { ActivityIndicator, ColorValue } from "react-native";
+import { useUnistyles } from "react-native-unistyles";
 
 type ActivityIndicatorAppProps = {
-  size?: number | 'small' | 'large' | undefined;
+  size?: number | "small" | "large" | undefined;
   color?: ColorValue | undefined;
 };
 
 export const ActivityIndicatorApp: React.FC<ActivityIndicatorAppProps> = ({
-  size = 'small',
+  size = "small",
   color,
 }) => {
   const {
-    theme: {colors},
+    theme: { colors },
   } = useUnistyles();
-  return <ActivityIndicator size={size} color={color || colors.tint} />;
+  return <ActivityIndicator size={size} color={color || colors.primary} />;
 };

@@ -21,7 +21,7 @@ export const Editable: React.FC<EditableProps> = ({
   return (
     <Input
       style={[styles.input, stylesCommon.input, style]}
-      placeholderTextColor={colors.gray2}
+      placeholderTextColor={colors.grey[400]}
       {...props}
     />
   );

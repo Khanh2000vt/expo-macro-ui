@@ -105,8 +105,8 @@ export const ScrollPage: ForwardRefComponent<
             <RefreshControl
               refreshing={refreshing}
               onRefresh={handleRefresh}
-              tintColor={colors.tint}
-              colors={[colors.tint]}
+              tintColor={colors.primary}
+              colors={[colors.primary]}
             />
           ) : undefined
         }

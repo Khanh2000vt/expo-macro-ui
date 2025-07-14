@@ -43,9 +43,9 @@ export const Input: React.FC<InputProps> = ({
       return theme.colors.error;
     }
     if (isFocus || isHaveValue) {
-      return theme.colors.tint;
+      return theme.colors.primary;
     }
-    return theme.colors.gray4;
+    return theme.colors.grey[500];
   }, [error, isFocus, theme.colors, isHaveValue]);
 
   return (

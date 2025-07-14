@@ -26,7 +26,7 @@ export const FormField: React.FC<FormFieldProps> = ({
         <TextApp weight={600} type="titleForm" mb={scaler(2)}>
           {title}
           <Show when={require}>
-            <TextApp color={colors.red2}> *</TextApp>
+            <TextApp color={colors.textError}> *</TextApp>
           </Show>
         </TextApp>
       </Show>

@@ -117,7 +117,7 @@ export const BottomSheetApp: ForwardRefComponent<
 const styles = StyleSheet.create(({ colors }) => ({
   indicator: (enablePanDownToClose: boolean) => ({
     width: scaler(50),
-    backgroundColor: colors.gray1,
+    backgroundColor: colors.grey[200],
     opacity: enablePanDownToClose ? 1 : 0,
   }),
 }));

@@ -54,7 +54,7 @@ export const GlobalLoading = forwardRef<LoadingHandlerRef>(({}, ref) => {
         position="absolute"
       >
         <Box style={styles.container}>
-          <ActivityIndicator color={theme.colors.tint} size={"large"} />
+          <ActivityIndicator color={theme.colors.primary} size={"large"} />
         </Box>
       </BoxAnimatedFade>
     </Show>

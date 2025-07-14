@@ -35,7 +35,7 @@ export const Separator: React.FC<LineProps> = ({
       height={vertical ? "100%" : scaler(size)}
       mh={vertical ? space : undefined}
       mv={vertical ? undefined : space}
-      bgColor={color || colors.gray1}
+      bgColor={color || colors.grey[200]}
       opacity={opacity}
       style={style}
     />

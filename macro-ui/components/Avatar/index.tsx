@@ -71,7 +71,7 @@ export const Avatar: React.FC<AvatarProps> = ({
       />
       <Show when={(error || !uri) && !!name}>
         <AbsoluteCenter
-          bgColor={bgColor || colors.tint}
+          bgColor={bgColor || colors.primary}
           style={styles.fame(size)}
         >
           <TextApp color={colors.white} weight={900} size={scaler(size / 3)}>

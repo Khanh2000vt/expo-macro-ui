@@ -14,7 +14,7 @@ export const CardBox: React.FC<CardBoxProps> = ({
 }) => {
   styles.useVariants({ type });
   const { theme } = useUnistyles();
-  const colorBadge = (bgColor || theme.colors.tint) as string;
+  const colorBadge = (bgColor || theme.colors.primary) as string;
   return <Box {...props} style={[styles.container(colorBadge), style]} />;
 };
 

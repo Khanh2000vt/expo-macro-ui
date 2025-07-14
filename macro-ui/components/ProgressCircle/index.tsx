@@ -59,7 +59,7 @@ export const ProgressCircle: React.FC<ProgressCircleProps> = ({
           cx={sizePart}
           cy={sizePart}
           r={radius}
-          stroke={color ? `${color}20` : colors.tint20}
+          stroke={color ? `${color}20` : `${colors.primary}20`}
           strokeWidth={strokeWidth}
           fill="transparent"
         />
@@ -67,7 +67,7 @@ export const ProgressCircle: React.FC<ProgressCircleProps> = ({
           cx={sizePart}
           cy={sizePart}
           r={radius}
-          stroke={color ?? colors.tint}
+          stroke={color ?? colors.primary}
           strokeWidth={strokeWidth}
           fill="transparent"
           strokeDasharray={circumference}
@@ -79,7 +79,7 @@ export const ProgressCircle: React.FC<ProgressCircleProps> = ({
 
       <TextApp
         size={percentage === 1 ? scaler(12) : scaler(14)}
-        color={color ?? colors.tint}
+        color={color ?? colors.primary}
         textAlign="center"
         weight={800}
       >

@@ -40,7 +40,7 @@ export const ItemSelect: React.FC<ItemSelectProps> = ({
       justify="space-between"
       minH={HeightItemPicker}
       ph={scaler(20)}
-      bgColor={selected ? colors.tint10 : colors.white}
+      bgColor={selected ? `${colors.primary}10` : colors.white}
       pv={scaler(12)}
       columnGap={scaler(8)}
       disabled={disabled}
@@ -51,7 +51,7 @@ export const ItemSelect: React.FC<ItemSelectProps> = ({
       </Box>
       <Ionicons
         name="checkmark-outline"
-        stroke={colors.tint}
+        stroke={colors.primary}
         opacity={selected ? 1 : 0}
       />
     </PressableApp>

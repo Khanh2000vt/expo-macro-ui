@@ -21,12 +21,12 @@ export const RadioIcon: React.FC<RadioIconProps> = ({
     <Center
       style={styles.container(size)}
       borderWidth={1.5}
-      borderColor={checked ? colors.tint : colors.border}
+      borderColor={checked ? colors.primary : colors.border}
     >
       <Show when={checked}>
         <BoxAnimatedFade
           style={styles.container(size - 8)}
-          bgColor={colors.tint}
+          bgColor={colors.primary}
         />
       </Show>
     </Center>
