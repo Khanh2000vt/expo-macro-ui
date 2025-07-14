@@ -1,2 +1,2 @@
 import "expo-router/entry";
-import "./macro-ui/themes/unistyles/unistyles"; // <-- file that initializes Unistyles
+import "./macro-ui/templates/themes/unistyles/unistyles"; // <-- file that initializes Unistyles
