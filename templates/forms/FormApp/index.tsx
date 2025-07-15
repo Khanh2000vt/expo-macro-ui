@@ -8,11 +8,11 @@ import {
   CheckboxField,
   InputField,
   RadioField,
+  SelectField,
   SwitchField,
   TextareaField,
   TextField,
 } from "../fields";
-import { SelectField } from "../fields/SelectField";
 import { FormAppProps, FormFieldType } from "../form.type";
 
 export const FormApp = <T extends FieldValues>({

@@ -1,6 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 
+const { colors } = require("./colors");
+
 function ensureDirectoryExists(dirPath) {
   if (!fs.existsSync(dirPath)) {
     fs.mkdirSync(dirPath, { recursive: true });
@@ -60,10 +62,55 @@ function askQuestion(question) {
   });
 }
 
+function appendToFile(filePath, content) {
+  const pathTarget = "src/macro-ui";
+  const targetPath = path.join(process.cwd(), pathTarget, filePath);
+  fs.appendFileSync(targetPath, content + "\n", "utf8");
+  console.log(`✅ Appended to file: ${filePath}`);
+}
+
+function removeStringFromFile(filePath, stringToRemove) {
+  const pathTarget = "src/macro-ui";
+  const targetPath = path.join(process.cwd(), pathTarget, filePath);
+  if (!fs.existsSync(targetPath)) {
+    console.log(`❌ File not found: ${filePath}`);
+    return;
+  }
+
+  const content = fs.readFileSync(targetPath, "utf8");
+  const updated = content.replace(stringToRemove, "");
+
+  if (content !== updated) {
+    fs.writeFileSync(targetPath, updated, "utf8");
+    console.log(`✅ Removed string from file: ${filePath}`);
+  } else {
+    console.log(`ℹ️ String not found in file: ${filePath}`);
+  }
+}
+
+function deleteFolder(folderPath) {
+  const pathTarget = "src/macro-ui";
+  const targetPath = path.join(process.cwd(), pathTarget, filePath);
+  if (fs.existsSync(targetPath)) {
+    fs.rmSync(targetPath, { recursive: true, force: true });
+    console.log(colors.green(`🗑️ Deleted folder: ${folderPath}`));
+  } else {
+    console.log(colors.red(`⚠️ Folder not found: ${folderPath}`));
+  }
+}
+
+function getExportString(text) {
+  return `export * from './${text}';`;
+}
+
 module.exports = {
   ensureDirectoryExists,
   copyDirectory,
   fileExists,
   getAvailableComponents,
   askQuestion,
+  appendToFile,
+  removeStringFromFile,
+  deleteFolder,
+  getExportString,
 };

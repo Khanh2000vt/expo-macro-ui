@@ -1,19 +1,19 @@
-import {FontSizeForm} from '../global';
-import {ColorsStatic, scaler} from '../themes';
-import {TypographyStyleType} from './typography.type';
+import { FontSizeForm } from "../global";
+import { scaler } from "../themes";
+import { TypographyStyleType } from "./typography.type";
 
-const fontMap: {[key: string]: {normal: string; italic: string}} = {
-  '300': {normal: 'WorkSans-Light', italic: 'WorkSans-LightItalic'},
-  '400': {normal: 'WorkSans-Regular', italic: 'WorkSans-Italic'},
-  '500': {normal: 'WorkSans-Medium', italic: 'WorkSans-MediumItalic'},
-  '600': {normal: 'WorkSans-SemiBold', italic: 'WorkSans-SemiBoldItalic'},
-  '700': {normal: 'WorkSans-Bold', italic: 'WorkSans-BoldItalic'},
-  '800': {normal: 'WorkSans-ExtraBold', italic: 'WorkSans-ExtraBoldItalic'},
+const fontMap: { [key: string]: { normal: string; italic: string } } = {
+  "300": { normal: "WorkSans-Light", italic: "WorkSans-LightItalic" },
+  "400": { normal: "WorkSans-Regular", italic: "WorkSans-Italic" },
+  "500": { normal: "WorkSans-Medium", italic: "WorkSans-MediumItalic" },
+  "600": { normal: "WorkSans-SemiBold", italic: "WorkSans-SemiBoldItalic" },
+  "700": { normal: "WorkSans-Bold", italic: "WorkSans-BoldItalic" },
+  "800": { normal: "WorkSans-ExtraBold", italic: "WorkSans-ExtraBoldItalic" },
 };
 
 export const getStyleTypography = (
   props: TypographyStyleType,
-  colors: Record<keyof typeof ColorsStatic, string>,
+  colors: Record<string, string>
 ): any => {
   const {
     m,
@@ -80,43 +80,43 @@ export const getStyleTypography = (
       type: {
         heading: {
           fontSize: size ?? scaler(20),
-          fontFamily: getFontFamily(weight ?? '600', fontStyle),
+          fontFamily: getFontFamily(weight ?? "600", fontStyle),
           fontStyle: fontStyle,
         },
         title: {
           fontSize: size ?? scaler(18),
-          fontFamily: getFontFamily(weight ?? '600', fontStyle),
+          fontFamily: getFontFamily(weight ?? "600", fontStyle),
           fontStyle: fontStyle,
         },
         label: {
           fontSize: size ?? scaler(16),
-          fontFamily: getFontFamily(weight ?? '600', fontStyle),
+          fontFamily: getFontFamily(weight ?? "600", fontStyle),
           fontStyle: fontStyle,
         },
         text: {
           fontSize: size ?? scaler(14),
-          fontFamily: getFontFamily(weight ?? '400', fontStyle),
+          fontFamily: getFontFamily(weight ?? "400", fontStyle),
           fontStyle: fontStyle,
         },
         subtext: {
           fontSize: size ?? scaler(12),
-          fontFamily: getFontFamily(weight ?? '400', fontStyle),
+          fontFamily: getFontFamily(weight ?? "400", fontStyle),
           fontStyle: fontStyle,
         },
         error: {
           fontSize: size ?? scaler(10),
-          fontFamily: getFontFamily(weight ?? '500', fontStyle ?? 'italic'),
-          fontStyle: fontStyle ?? 'italic',
+          fontFamily: getFontFamily(weight ?? "500", fontStyle ?? "italic"),
+          fontStyle: fontStyle ?? "italic",
           color: color ?? colors.error,
         },
         titleForm: {
           fontSize: size ?? scaler(14),
-          fontFamily: getFontFamily(weight ?? '600', fontStyle),
+          fontFamily: getFontFamily(weight ?? "600", fontStyle),
           fontStyle: fontStyle,
         },
         default: {
           fontSize: size ?? scaler(14),
-          fontFamily: getFontFamily(weight ?? '400', fontStyle),
+          fontFamily: getFontFamily(weight ?? "400", fontStyle),
           fontStyle: fontStyle,
         },
       },
@@ -126,10 +126,10 @@ export const getStyleTypography = (
 
 const getFontFamily = (
   fontWeight: string | number | undefined,
-  fontStyle?: string,
+  fontStyle?: string
 ): string => {
-  const weight = fontWeight ? String(fontWeight) : '400';
-  const isItalic = fontStyle === 'italic';
-  const selectedWeight = fontMap[weight] || fontMap['400'];
+  const weight = fontWeight ? String(fontWeight) : "400";
+  const isItalic = fontStyle === "italic";
+  const selectedWeight = fontMap[weight] || fontMap["400"];
   return isItalic ? selectedWeight.italic : selectedWeight.normal;
 };

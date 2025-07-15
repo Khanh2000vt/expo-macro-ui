@@ -1,13 +1,10 @@
-import React, { PropsWithChildren } from "react";
+import React from "react";
 import { useUnistyles } from "react-native-unistyles";
 import { scaler } from "../../themes";
 import { Box } from "../Box";
 import { BoxProps } from "../layout.type";
 
-export const BoxSafeAreaBottom: React.FC<PropsWithChildren<BoxProps>> = ({
-  children,
-  ...props
-}) => {
+export const BoxSafeAreaBottom: React.FC<BoxProps> = (props) => {
   const {
     rt,
     theme: { colors },
@@ -18,8 +15,6 @@ export const BoxSafeAreaBottom: React.FC<PropsWithChildren<BoxProps>> = ({
       p={scaler(16)}
       pb={Math.max(rt.insets.bottom, scaler(16))}
       {...props}
-    >
-      {children}
-    </Box>
+    />
   );
 };

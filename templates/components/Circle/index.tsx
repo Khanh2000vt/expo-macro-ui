@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
 import { ColorValue, StyleProp, View, ViewStyle } from "react-native";
-import { Box } from "../Box";
+import { Box } from "../../layout/Box";
 import { ForwardRefComponent } from "../../types";
 type CircleProps = {
   size?: number;

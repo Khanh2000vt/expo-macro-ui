@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { ColorValue, Text, View } from "react-native";
 import Animated, {
   interpolate,
   useAnimatedProps,

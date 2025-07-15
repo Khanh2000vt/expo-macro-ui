@@ -2,7 +2,7 @@ import { Ionicons } from "@expo/vector-icons";
 import React from "react";
 import { View } from "react-native";
 import { StyleSheet, useUnistyles } from "react-native-unistyles";
-import { BoxAnimatedFade } from "~/macro-ui/layout/BoxAnimatedFade";
+import { BoxAnimatedFade } from "../../layout/BoxAnimatedFade";
 import { Show } from "../../layout/Show";
 import { scaler } from "../../themes/scale";
 

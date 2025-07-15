@@ -55,7 +55,7 @@ export const ButtonApp: React.FC<ButtonAppProps> = ({
   return (
     <Pressable
       {...propsButton}
-      style={[styles.pressable(buttonColor, isDisabled), shadow.box2, style]}
+      style={[styles.pressable(buttonColor, isDisabled), shadow.box, style]}
       disabled={isDisabled}
     >
       {renderIcon(IconLeft, true)}

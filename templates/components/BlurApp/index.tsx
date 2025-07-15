@@ -1,13 +1,12 @@
-import {BlurView, BlurViewProps} from 'expo-blur';
-import React from 'react';
-import {stylesLayout} from '../layout.style';
-import {BoxProps} from '../layout.type';
+import { BlurView, BlurViewProps } from "expo-blur";
+import React from "react";
+import { BoxProps, stylesLayout } from "../../layout";
 
-type BlurAppProps = Pick<BlurViewProps, 'intensity' | 'tint'> & BoxProps;
+type BlurAppProps = Pick<BlurViewProps, "intensity" | "tint"> & BoxProps;
 
 export const BlurApp: React.FC<BlurAppProps> = ({
   intensity,
-  tint = 'light',
+  tint = "light",
   children = null,
   style,
   onLayout,
