@@ -101,8 +101,9 @@ import {GlobalLoading, GlobalService} from '~/macro-ui/global';
 
 export default function RootLayout() {
 	return (
-		<...>  {* Các provider của các thư viện *}
-			<Stack />
+    {* Các provider của các thư viện *}
+		<...>
+		  <Stack />
 			<GlobalLoading ref={GlobalService.globalLoadingRef} />  <--- viết ở đây
 		</...>
 	)
@@ -349,6 +350,7 @@ expo-macro-ui add text_ticker // Thêm component TextTickerApp vào macro-ui
 | activity_indicator | ActivityIndicatorApp | ActivityIndicator của react native                                                                          | -                                                                                                                                     |
 | bottom_sheet       | BottomSheetApp       | -                                                                                                           | Package: `@gorhom/bottom-sheet`                                                                                                       |
 | forms              | FormApp              | Viết forms bằng mảng object js                                                                              | Package: `react-hook-form`                                                                                                            |
+| accordion          | Accordion            | Accordion                                                                                                   | Component: `PressableApp`                                                                                                             |
 
 ### 5. FormsApp
 

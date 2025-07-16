@@ -22,3 +22,4 @@ export * from "./Textarea";
 export * from "./TouchableApp";
 export * from "./Circle";
 export * from "./BlurApp";
+export * from "./Accordion";

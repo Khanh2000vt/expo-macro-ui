@@ -2,6 +2,7 @@ export * from "./Absolute";
 export * from "./AbsoluteCenter";
 export * from "./Box";
 export * from "./BoxAnimatedFade";
+export * from "./BoxExpanded";
 export * from "./BoxHideKeyboard";
 export * from "./BoxSafeAreaBottom";
 export * from "./Center";
