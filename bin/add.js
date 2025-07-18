@@ -248,6 +248,12 @@ async function getComponentByName(componentName) {
       break;
     case "forms":
       addCommand("forms");
+    case "modal-confirm":
+      addCommand("components/ModalConfirm");
+      appendToFile("components/index.ts", getExportString("ModalConfirm"));
+    case "contacts":
+      addCommand("components/ContactsPicker");
+      appendToFile("components/index.ts", getExportString("ContactsPicker"));
     default:
       console.log(colors.red(`Component "${componentName}" not found!`));
       break;

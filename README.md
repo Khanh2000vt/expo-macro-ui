@@ -351,6 +351,9 @@ expo-macro-ui add text_ticker // Thêm component TextTickerApp vào macro-ui
 | bottom_sheet       | BottomSheetApp       | -                                                                                                           | Package: `@gorhom/bottom-sheet`                                                                                                       |
 | forms              | FormApp              | Viết forms bằng mảng object js                                                                              | Package: `react-hook-form`                                                                                                            |
 | accordion          | Accordion            | Accordion                                                                                                   | Component: `PressableApp`                                                                                                             |
+| -                  | Toasts               | Toasts                                                                                                      | Package: `@backpackapp-io/react-native-toast`                                                                                         |
+| modal-confirm      | ModalConfirm         | ModalConfirm                                                                                                | Components: `ModalAp`, `ButtonApp`<br> Package: `@expo/vector-icons`                                                                  |
+| contacts           | ContactsPicker       | ContactsPicker                                                                                              | Package: `@gorhom/bottom-sheet`, `expo-contacts`, `expo-linking`<br>Components: `ModalConfirm`, `PressableApp`, `Separator`           |
 
 ### 5. FormsApp
 

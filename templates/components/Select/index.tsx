@@ -86,7 +86,7 @@ export const Select: React.FC<SelectProps> = ({
     : listPick?.length === optionsLength;
 
   const LabelSelected = useMemo(() => {
-    if (checkedAll) {
+    if (checkedAll && isMultiple) {
       return "Tất cả";
     }
     if (!values) {
